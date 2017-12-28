@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HostPageNumberPhone } from '../HostPageNumberPhone/HostPageNumberPhone';
 
 @Component({
   selector: 'page-login',
@@ -8,31 +9,21 @@ import { NavController } from 'ionic-angular';
 export class LoginPage {
 
   isClickedTitle = false;
-
   constructor(public navCtrl: NavController) {
-
   }
 
-  teste(){
-    console.log('teste')
-    this.isClickedTitle = true;
-    var interval = window.setTimeout(function() {
-      console.log('oi 32' )
-      this.isClickedTitle = false;
-      // clearInterval(interval);
-    }, 2000);
-    this.isClickedTitle = false;
-  }
+  public goToHostPhone(){
+    console.log("go to host phone");
+    this.navCtrl.push(HostPageNumberPhone);
 
-  onTap() {
-    console.log('tapped');
   }
-  onPress($event) {
-      console.log('pressed');
+  goToGuestPin(){
+    console.log("go to host phone");
+   
   }
+ 
 
   getMyStyles(){
-    console.log('this.isClickedTitle', this.isClickedTitle)
     let myStyles = {
       'background-color': this.isClickedTitle ? 'red' : 'white',
    };

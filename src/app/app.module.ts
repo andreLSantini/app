@@ -11,6 +11,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
+import { HostPageNumberPhone } from '../pages/HostPageNumberPhone/HostPageNumberPhone';
+import {Ionic2MaskDirective} from "ionic2-mask-directive";
+import { HttpModule} from '@angular/http';
+import { HostPageNumberPhoneService } from '../pages/HostPageNumberPhone/HostPageNumberPhone.service';
+import { InsertPinCodeHost } from '../pages/InsertPinCodeHost/InsertPinCodeHost';
 
 @NgModule({
   declarations: [
@@ -19,10 +24,14 @@ import { LoginPage } from '../pages/login/login';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    HostPageNumberPhone,
+    Ionic2MaskDirective,
+    InsertPinCodeHost
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,11 +41,14 @@ import { LoginPage } from '../pages/login/login';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    HostPageNumberPhone,
+    InsertPinCodeHost
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    HostPageNumberPhoneService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

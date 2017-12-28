@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu">back</ion-icon>
+      </button>
+      <ion-title>
+        insert phone number
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only [disabled]="user.phonechecked" (click)="sendPinMessage()">
+          done 
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding style="background-color: #007bff">
+    <ion-grid style="background-color: #007bff; display: flex;align-items: center">
+      <ion-row style="background-color: #007bff;padding-top: 8rem" >
+        <ion-col col-12  style="background-color: #007bff">
+            <p style="color: white;font-size: 24px;text-align: center;font-family: serif;font-variant: small-caps;">
+                insert Phone number with counter code
+            </p>
+        </ion-col>
+      </ion-row>
+      <ion-row  ion-item style="background-color: #007bff" >
+          <ion-input type="text"  mask="+(99) 99999-9999" (ngModelChange)="validNumberPhone($event)"  [(ngModel)]="user.phone" required style="color:white;font-size: 20px;text-align: center"></ion-input>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
