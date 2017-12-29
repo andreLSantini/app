@@ -8,3 +8,33 @@
       </ion-title>
     </ion-navbar>
 </ion-header>
+<ion-content padding style="background-color: #007bff">
+  <ion-grid style="background-color: #007bff; display: flex;align-items: center">
+    <ion-row style="background-color: #007bff;padding-top: 8rem" >
+      <ion-col col-12  style="background-color: #007bff">
+          <p style="color: white;font-size: 24px;text-align: center;font-family: serif;font-variant: small-caps;">
+              insert iMessage code send your iPhone
+          </p>
+      </ion-col>
+    </ion-row>
+    <ion-row style="display: -webkit-inline-box">
+        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
+        border-width: 3px;background-color: #007bff">
+            <ion-input (ngModelChange)="onChangeLastPin($event)" [(ngModel)]="pin1" max="1" type="text" style="color:white"></ion-input>
+        </ion-item>
+        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
+        border-width: 3px;background-color: #007bff">
+            <ion-input (ngModelChange)="onChangeLastPin($event)" [(ngModel)]="pin2" max="1" type="text" style="color:white"></ion-input>
+        </ion-item>
+        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
+        border-width: 3px;background-color: #007bff">
+            <ion-input (ngModelChange)="onChangeLastPin($event)" [(ngModel)]="pin3" max="1" type="text" style="color:white"></ion-input>
+        </ion-item>
+        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
+        border-width: 3px;background-color: #007bff">
+            <ion-input (ngModelChange)="onChangeLastPin($event)"  [(ngModel)]="pin4" required max="1"  type="text" style="color:white" ></ion-input>
+        </ion-item>
+    </ion-row>
+   
+  </ion-grid>
+</ion-content>

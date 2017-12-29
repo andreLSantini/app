@@ -16,6 +16,9 @@ import {Ionic2MaskDirective} from "ionic2-mask-directive";
 import { HttpModule} from '@angular/http';
 import { HostPageNumberPhoneService } from '../pages/HostPageNumberPhone/HostPageNumberPhone.service';
 import { InsertPinCodeHost } from '../pages/InsertPinCodeHost/InsertPinCodeHost';
+import { Events } from '../pages/events/Events';
+import { InsertPinCodeHostService } from '../pages/InsertPinCodeHost/InsertPinCodeHost.service';
+import { NewEvents } from '../pages/newevents/newEvent';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { InsertPinCodeHost } from '../pages/InsertPinCodeHost/InsertPinCodeHost'
     LoginPage,
     HostPageNumberPhone,
     Ionic2MaskDirective,
-    InsertPinCodeHost
+    InsertPinCodeHost,
+    Events,
+    NewEvents
   ],
   imports: [
     BrowserModule,
@@ -43,12 +48,15 @@ import { InsertPinCodeHost } from '../pages/InsertPinCodeHost/InsertPinCodeHost'
     TabsPage,
     LoginPage,
     HostPageNumberPhone,
-    InsertPinCodeHost
+    InsertPinCodeHost,
+    Events,
+    NewEvents
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HostPageNumberPhoneService,
+    InsertPinCodeHostService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
