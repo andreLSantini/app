@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+        <ion-icon name="menu">back</ion-icon>
+        </button>
+        <ion-title>
+        Events
+        </ion-title>
+        <ion-buttons end>
+        <button ion-button icon-only (click)="newEvent()">
+            <ion-icon name="add" ></ion-icon> 
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding >
+    <ion-grid style="display: flex;align-items: center;color: #2A9FD8;padding-top: 15rem;font-size: 25px">
+        <button ion-button  [clear]="true" style="font-size: 25px" (click)="newevent()">
+                add event
+        </button>
+    </ion-grid>
+</ion-content>

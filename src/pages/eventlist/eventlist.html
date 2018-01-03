@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+        <ion-icon name="menu">back</ion-icon>
+        </button>
+        <ion-title>
+        Events
+        </ion-title>
+        <ion-buttons end>
+        <button ion-button icon-only (click)="newEvent()">
+            <ion-icon name="add" ></ion-icon> 
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding >
+    <ion-list>
+        <ion-list-header>
+            Events
+        </ion-list-header>
+        <button ion-item *ngFor="let event of events" (click)="itemSelected(event)">
+            {{event.description}}
+        </button>
+    </ion-list>
+</ion-content>
+
+                  

@@ -18,7 +18,14 @@ import { HostPageNumberPhoneService } from '../pages/HostPageNumberPhone/HostPag
 import { InsertPinCodeHost } from '../pages/InsertPinCodeHost/InsertPinCodeHost';
 import { Events } from '../pages/events/Events';
 import { InsertPinCodeHostService } from '../pages/InsertPinCodeHost/InsertPinCodeHost.service';
-import { NewEvents } from '../pages/newevents/newEvent';
+import { NewEventMenager } from '../pages/neweventsmenager/newEventMenager';
+import { NewEvent } from '../pages/newevent/newevent';
+import { NewEventService } from '../pages/newevent/newevent.service';
+import { EventList } from '../pages/eventlist/eventlist';
+import { EventListMenager } from '../pages/eventlistmenager/EventListMenager';
+import { EventListService } from '../pages/eventlist/eventlist.service';
+import { EventDetails } from '../pages/eventDetails/EventDetails';
+import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
 
 @NgModule({
   declarations: [
@@ -32,13 +39,20 @@ import { NewEvents } from '../pages/newevents/newEvent';
     Ionic2MaskDirective,
     InsertPinCodeHost,
     Events,
-    NewEvents
+    NewEventMenager,
+    NewEvent,
+    EventList,
+    EventListMenager,
+    EventDetails
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
-  ],
+    IonicModule.forRoot(MyApp, {
+      // Configs for your app
+      tabsHideOnSubPages: true,
+    }, 
+  )],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -50,13 +64,20 @@ import { NewEvents } from '../pages/newevents/newEvent';
     HostPageNumberPhone,
     InsertPinCodeHost,
     Events,
-    NewEvents
+    NewEventMenager,
+    NewEvent,
+    EventList,
+    EventListMenager,
+    EventDetails
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HostPageNumberPhoneService,
     InsertPinCodeHostService,
+    NewEventService,
+    EventListService,
+    EventDetailsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

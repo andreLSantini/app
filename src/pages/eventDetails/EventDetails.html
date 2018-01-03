@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+        <ion-icon name="menu">back</ion-icon>
+        </button>
+        <ion-title>
+        {{event.description}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding style="background-color: rgb(239, 239, 244)">
+    <ion-grid >
+        <ion-row >
+        <ion-item style="background-color: rgb(239, 239, 244);font-size: 14px">
+            <ion-label>GIVE YOUR EVENT A NAME</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="title" [(ngModel)]="event.description"> </ion-input>
+        </ion-item>
+        </ion-row>
+        <ion-row >
+        <ion-item style="background-color: rgb(239, 239, 244);font-size: 14px">
+            <ion-label>EVENT DURATION</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 15px">START</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY HH:mm" [(ngModel)]="event.firstDate"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 15px">FINISH</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY HH:mm" min="{{event.firstDate}}" [(ngModel)]="event.lastDate"></ion-datetime>
+        </ion-item>
+        </ion-row>
+        <ion-row >
+            <ion-item style="background-color: rgb(239, 239, 244);font-size: 14px">
+                <ion-label>EVENT PIN & ACTIONS</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked color="primary" style="font-size: 15px">share event pin</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked color="primary"style="font-size: 15px">share complete download link</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked color="primary"style="font-size: 15px">finish event now</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked color="danger"style="font-size: 15px">delete event</ion-label>
+            </ion-item>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-tabs selectedIndex="2" >
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+    <ion-tab [root]="tab1Root" tabTitle="Camera" tabIcon="camera"></ion-tab>
+    <ion-tab [root]="eventdetail" tabTitle="Events"  tabIcon="calendar"></ion-tab>
+    <ion-tab [root]="tab1Root" tabTitle="Settings" tabIcon="settings"></ion-tab>
+</ion-tabs>

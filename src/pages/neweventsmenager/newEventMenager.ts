@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { NewEvent } from '../newevent/newevent';
 
 @Component({
-  selector: 'page-newevents',
-  templateUrl: 'newEvent.html'
+  selector: 'page-neweventsmenager',
+  templateUrl: 'newEventMenager.html'
 })
-export class NewEvents {
+export class NewEventMenager {
 
 
 
@@ -14,4 +15,7 @@ export class NewEvents {
   }
  
 
+  newevent(){
+    this.navCtrl.push(NewEvent);
+  }
 }

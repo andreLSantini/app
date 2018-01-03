@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { NewEvents } from '../newevents/newEvent';
+import { NewEventMenager } from '../neweventsmenager/newEventMenager';
+
 
 @Component({
   selector: 'page-events',
@@ -10,7 +11,7 @@ import { NewEvents } from '../newevents/newEvent';
 export class Events {
 
   tab1Root = LoginPage;
-  events = NewEvents;
+  events = NewEventMenager;
 
   constructor(public navCtrl: NavController) {
   }
@@ -23,6 +24,10 @@ export class Events {
 
   goToEvents(response){
     // this.navCtrl.push(InsertPinCodeHost);
+  }
+
+  newEvent(){
+    console.log('test')
   }
 
 }
