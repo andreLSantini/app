@@ -29,6 +29,9 @@ import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
 import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMenager';
 import { Settings } from '../pages/settings/settings';
 import { SettingsService } from '../pages/settings/settings.service';
+import { InsertPinCodeGuest } from '../pages/insertPinCodeGuest/insertPinCodeGuest';
+import { InsertPinCodeGuestService } from '../pages/insertPinCodeGuest/insertPinCodeGuest.service';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { SettingsService } from '../pages/settings/settings.service';
     EventListMenager,
     EventDetails,
     EventDetailsMenager,
-    Settings
+    Settings,
+    InsertPinCodeGuest
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,8 @@ import { SettingsService } from '../pages/settings/settings.service';
     EventListMenager,
     EventDetails,
     EventDetailsMenager,
-    Settings
+    Settings,
+    InsertPinCodeGuest
   ],
   providers: [
     StatusBar,
@@ -85,6 +90,8 @@ import { SettingsService } from '../pages/settings/settings.service';
     EventListService,
     EventDetailsService,
     SettingsService,
+    InsertPinCodeGuestService,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

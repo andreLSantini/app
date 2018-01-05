@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HostPageNumberPhone } from '../HostPageNumberPhone/HostPageNumberPhone';
+import { InsertPinCodeGuest } from '../insertPinCodeGuest/insertPinCodeGuest';
 
 @Component({
   selector: 'page-login',
@@ -19,7 +20,7 @@ export class LoginPage {
   }
   goToGuestPin(){
     console.log("go to host phone");
-   
+    this.navCtrl.push(InsertPinCodeGuest);
   }
  
 

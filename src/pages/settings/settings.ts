@@ -1,9 +1,9 @@
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HostPageNumberPhone } from '../HostPageNumberPhone/HostPageNumberPhone';
 import { HostPageNumberPhoneService } from '../HostPageNumberPhone/HostPageNumberPhone.service';
 import { SettingsService } from './settings.service'
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -40,5 +40,9 @@ export class Settings implements OnInit{
    	 this.userdetails.eventscapacity = response.eventscapacity;
    	 this.userdetails.paymentoption = response.paymentoption;
    }
+
+   back(){
+    this.navCtrl.push(LoginPage);
+  }
 
 }
