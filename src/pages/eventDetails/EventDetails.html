@@ -1,8 +1,5 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button icon-only menuToggle>
-        <ion-icon name="menu">back</ion-icon>
-        </button>
         <ion-title>
         {{event.description}}
         </ion-title>
@@ -50,9 +47,3 @@
         </ion-row>
     </ion-grid>
 </ion-content>
-<ion-tabs selectedIndex="2" >
-    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-    <ion-tab [root]="tab1Root" tabTitle="Camera" tabIcon="camera"></ion-tab>
-    <ion-tab [root]="eventdetail" tabTitle="Events"  tabIcon="calendar"></ion-tab>
-    <ion-tab [root]="tab1Root" tabTitle="Settings" tabIcon="settings"></ion-tab>
-</ion-tabs>

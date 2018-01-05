@@ -24,4 +24,17 @@ export class NewEvent {
     this.navCtrl.push(EventListMenager)
   }
 
+  eventChecked(){
+    if(this.event.description == null || this.event.description == undefined || this.event.description.length < 1){
+      return true;
+    }
+    if(this.event.firstDate == null || this.event.firstDate == undefined){
+      return true;
+    }
+    if(this.event.lastDate == null || this.event.lastDate == undefined){
+      return true;
+    }
+    return false;
+  }
+
 }

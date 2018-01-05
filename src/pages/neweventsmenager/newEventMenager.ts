@@ -14,6 +14,9 @@ export class NewEventMenager {
   constructor(public navCtrl: NavController) {
   }
  
+  back(){
+    this.navCtrl.push(LoginPage);
+  }
 
   newevent(){
     this.navCtrl.push(NewEvent);

@@ -4,6 +4,8 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { EventListService } from './eventlist.service';
 import { NewEvent } from '../newevent/newevent';
 import { EventDetails } from '../eventDetails/EventDetails';
+import { LoginPage } from '../login/login';
+import { EventDetailsMenager } from '../eventDetailsMenager/eventDetailsMenager';
 
 @Component({
   selector: 'page-eventlist',
@@ -28,10 +30,13 @@ export class EventList implements OnInit{
   }
 
   itemSelected(item){
-    this.navCtrl.push(EventDetails,{id : item.id});
+    this.navCtrl.push(EventDetailsMenager,{id : item.id});
   }
 
   newEvent(){
     this.navCtrl.push(NewEvent);
+  }
+  back(){
+    this.navCtrl.push(LoginPage);
   }
 }

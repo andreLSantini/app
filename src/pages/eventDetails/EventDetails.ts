@@ -13,6 +13,7 @@ export class EventDetails {
     public event :  EventObject;
     tab1Root = LoginPage;
     events = EventDetails;
+
     constructor(public navCtrl: NavController,private navParams: NavParams,public service: EventDetailsService) {
         this.event = new EventObject();
         let id = navParams.get('id');
@@ -27,14 +28,6 @@ export class EventDetails {
       this.event.lastDate = lastDate;  
     }); 
        
-  }
-
-  setObject(x) {
-      console.log('xxxxxxxx->', x);
-    //   public description : string;
-    //   public firstDate : any;
-    //   public lastDate : any;
-      
   }
 
 }

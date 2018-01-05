@@ -26,6 +26,7 @@ import { EventListMenager } from '../pages/eventlistmenager/EventListMenager';
 import { EventListService } from '../pages/eventlist/eventlist.service';
 import { EventDetails } from '../pages/eventDetails/EventDetails';
 import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
+import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMenager';
 
 @NgModule({
   declarations: [
@@ -43,14 +44,14 @@ import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
     NewEvent,
     EventList,
     EventListMenager,
-    EventDetails
+    EventDetails,
+    EventDetailsMenager
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp, {
       // Configs for your app
-      tabsHideOnSubPages: true,
     }, 
   )],
   bootstrap: [IonicApp],
@@ -68,7 +69,8 @@ import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
     NewEvent,
     EventList,
     EventListMenager,
-    EventDetails
+    EventDetails,
+    EventDetailsMenager
   ],
   providers: [
     StatusBar,

@@ -1,13 +1,15 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button icon-only menuToggle>
-        <ion-icon name="menu">back</ion-icon>
-        </button>
+    <ion-navbar >
+        <ion-buttons start>
+            <button ion-button icon-only (click)="back()">
+                <ion-icon name="arrow-back" ></ion-icon> Home
+            </button>
+        </ion-buttons>
         <ion-title>
         Events
         </ion-title>
         <ion-buttons end>
-        <button ion-button icon-only (click)="newEvent()">
+        <button ion-button icon-only (click)="newevent()">
             <ion-icon name="add" ></ion-icon> 
         </button>
         </ion-buttons>

@@ -25,8 +25,6 @@ export class InsertPinCodeHost {
   }
 
   onChangeLastPin(){
-    console.log('entro');
-    
     if(this.pin1==null || this.pin1 == undefined){
       return;
     }
@@ -39,9 +37,24 @@ export class InsertPinCodeHost {
     if(this.pin4==null || this.pin4 == undefined){
       return;
     }
-
-    console.log('entro 2');
     this.sendPinCode();
+  }
+
+  onChangePin1(event){
+    this.pin1 = event;
+    this.onChangeLastPin();
+  }
+  onChangePin2(event){
+    this.pin2 = event;
+    this.onChangeLastPin();
+  }
+  onChangePin3(event){
+    this.pin3 = event;
+    this.onChangeLastPin();
+  }
+  onChangePin4(event){
+    this.pin4 = event;
+    this.onChangeLastPin();
   }
   goToEvents(response){
     this.navCtrl.push(Events);
