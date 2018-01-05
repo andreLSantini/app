@@ -27,6 +27,8 @@ import { EventListService } from '../pages/eventlist/eventlist.service';
 import { EventDetails } from '../pages/eventDetails/EventDetails';
 import { EventDetailsService } from '../pages/eventDetails/EventDetailsService';
 import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMenager';
+import { Settings } from '../pages/settings/settings';
+import { SettingsService } from '../pages/settings/settings.service';
 
 @NgModule({
   declarations: [
@@ -45,14 +47,15 @@ import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMe
     EventList,
     EventListMenager,
     EventDetails,
-    EventDetailsMenager
+    EventDetailsMenager,
+    Settings
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp, {
       // Configs for your app
-    }, 
+    },
   )],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -70,7 +73,8 @@ import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMe
     EventList,
     EventListMenager,
     EventDetails,
-    EventDetailsMenager
+    EventDetailsMenager,
+    Settings
   ],
   providers: [
     StatusBar,
@@ -80,6 +84,7 @@ import { EventDetailsMenager } from '../pages/eventDetailsMenager/eventDetailsMe
     NewEventService,
     EventListService,
     EventDetailsService,
+    SettingsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

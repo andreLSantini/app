@@ -30,6 +30,8 @@ export class HostPageNumberPhone {
   }
 
   goToInsertImessageCode(response){
+    HostPageNumberPhoneService.getInstance().setPermaUser(this.user);
+    this.service.setPermaUser(this.user);
     this.navCtrl.push(InsertPinCodeHost);
   }
 
