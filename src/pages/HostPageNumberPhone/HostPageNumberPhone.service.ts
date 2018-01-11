@@ -20,9 +20,7 @@ export class HostPageNumberPhoneService {
     }
 
 	setPermaUser(user){
-	console.log('seto', user);
 		this.user = user;
-		console.log('setoda', this.user);
 	}
 	getPermaUser(){
 		return this.user;
