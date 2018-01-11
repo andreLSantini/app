@@ -1,7 +1,6 @@
 <ion-tabs selectedIndex="2" >
-    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-    <ion-tab [root]="tab1Root" tabTitle="Camera" tabIcon="camera"></ion-tab>
+    <ion-tab [root]="tab1Root" tabsHideOnSubPages="true" tabTitle="Home" tabIcon="home" (ionSelect)="goHome()" ></ion-tab>
+    <ion-tab  tabTitle="Camera" tabIcon="camera" (ionSelect)="openCam()"></ion-tab>
     <ion-tab [root]="events" tabTitle="Events"  tabsHideOnSubPages="true"  tabIcon="calendar"></ion-tab>
     <ion-tab [root]="settings" tabTitle="Settings" tabIcon="settings"></ion-tab>
 </ion-tabs>
-          
