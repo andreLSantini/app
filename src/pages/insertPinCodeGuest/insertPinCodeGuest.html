@@ -18,22 +18,10 @@
       </ion-col>
     </ion-row>
     <ion-row style="display: -webkit-inline-box" >
-        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
-        border-width: 3px;background-color: #5755d7">
-            <ion-input (ngModelChange)="onChangePin1($event)" [(ngModel)]="pin1" maxlength="1" max="1" type="text" style="color:white"></ion-input>
-        </ion-item>
-        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
-        border-width: 3px;background-color: #5755d7">
-            <ion-input (ngModelChange)="onChangePin2($event)" [(ngModel)]="pin2" maxlength="1" max="1" type="text" style="color:white"></ion-input>
-        </ion-item>
-        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
-        border-width: 3px;background-color: #5755d7">
-            <ion-input (ngModelChange)="onChangePin3($event)" [(ngModel)]="pin3" maxlength="1" max="1" type="text" style="color:white"></ion-input>
-        </ion-item>
-        <ion-item style="border-radius: 100rem;width:50px;border-color: white;border-style: solid;
-        border-width: 3px;background-color: #5755d7">
-            <ion-input (ngModelChange)="onChangePin4($event)"  [(ngModel)]="pin4" maxlength="1"  max="1"  type="text" style="color:white" ></ion-input>
-        </ion-item>
-    </ion-row>
+            <ion-item >
+                <ion-input (ngModelChange)="onChangePin($event)" [(ngModel)]="pin" maxlength="4" max="4" type="text"
+                text-center ></ion-input>
+            </ion-item>
+        </ion-row>
   </ion-grid>
 </ion-content>

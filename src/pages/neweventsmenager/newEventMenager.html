@@ -1,16 +1,13 @@
 <ion-header>
     <ion-navbar >
-        <ion-buttons start>
-            <button ion-button icon-only (click)="back()">
-                <ion-icon name="arrow-back" ></ion-icon> Home
-            </button>
-        </ion-buttons>
         <ion-title>
-        Events
+          <ion-icon style="font-size: 20px;color:dodgerblue" name="arrow-back" (click)="back()">
+              <label style="font-size: 20px;padding-right: 60px">home</label> </ion-icon>
+           Events
         </ion-title>
         <ion-buttons end>
         <button ion-button icon-only (click)="newevent()">
-            <ion-icon name="add" ></ion-icon> 
+            <ion-icon style="font-size: 20px;color:dodgerblue" name="add" ></ion-icon>
         </button>
         </ion-buttons>
     </ion-navbar>

@@ -42,7 +42,7 @@ export class Settings implements OnInit{
    }
 
    back(){
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(LoginPage)
   }
 
 }

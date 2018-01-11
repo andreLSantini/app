@@ -4,6 +4,7 @@ import { EventListMenager } from '../eventlistmenager/EventListMenager';
 import { EventObject } from '../newevent/newEventObject';
 import { EventDetailsService } from './EventDetailsService';
 import { LoginPage } from '../login/login';
+import { EventList } from '../eventlist/eventlist';
 
 @Component({
   selector: 'page-eventDetails',
@@ -28,6 +29,9 @@ export class EventDetails {
       this.event.lastDate = lastDate;  
     }); 
        
+  }
+  back(){
+    this.navCtrl.setRoot(EventList);
   }
 
 }

@@ -21,4 +21,8 @@ export class EventDetailsMenager {
         let id = navParams.get('id');
     }
 
+    goHome(){
+        this.navCtrl.setRoot(LoginPage);
+    }
+
 }
