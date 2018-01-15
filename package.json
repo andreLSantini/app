@@ -41,7 +41,7 @@
     "cordova-ios": "~4.5.4"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.7.1",
+    "@ionic/app-scripts": "3.0.1",
     "typescript": "2.4.2"
   },
   "description": "An Ionic project",
