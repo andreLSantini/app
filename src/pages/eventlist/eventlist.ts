@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { EventListService } from './eventlist.service';
 import { NewEvent } from '../newevent/newevent';
-import { EventDetails } from '../eventDetails/EventDetails';
 import { LoginPage } from '../login/login';
 import { EventDetailsMenager } from '../eventDetailsMenager/eventDetailsMenager';
 

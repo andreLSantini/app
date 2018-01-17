@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { EventListMenager } from '../eventlistmenager/EventListMenager';
 import { EventObject } from '../newevent/newEventObject';
 import { EventDetailsService } from './EventDetailsService';
 import { LoginPage } from '../login/login';
@@ -15,7 +14,7 @@ export class EventDetails {
     tab1Root = LoginPage;
     events = EventDetails;
 
-    constructor(public navCtrl: NavController,private navParams: NavParams,public service: EventDetailsService) {
+    constructor(public navCtrl: NavController, public navParams: NavParams,public service: EventDetailsService) {
         this.event = new EventObject();
         let id = navParams.get('id');
         console.log('xxxx - > ',id)

@@ -28,7 +28,7 @@ export class EventListMenager {
       mediaType: this.camera.MediaType.PICTURE
     }
     this.camera.getPicture(options).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
+      
      }, (err) => {
      });
 

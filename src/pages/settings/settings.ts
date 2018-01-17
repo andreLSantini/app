@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { HostPageNumberPhone } from '../HostPageNumberPhone/HostPageNumberPhone';
 import { HostPageNumberPhoneService } from '../HostPageNumberPhone/HostPageNumberPhone.service';
 import { SettingsService } from './settings.service'
 import { LoginPage } from '../login/login';

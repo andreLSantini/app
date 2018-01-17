@@ -1,15 +1,11 @@
-import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-
-import { StatusBar } from '@ionic-native/status-bar';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { HostPageNumberPhone } from '../pages/HostPageNumberPhone/HostPageNumberPhone';
 import {Ionic2MaskDirective} from "ionic2-mask-directive";
@@ -36,11 +32,8 @@ import { Camera } from '@ionic-native/camera';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage,
-    LoginPage,
+	LoginPage,
     HostPageNumberPhone,
     Ionic2MaskDirective,
     InsertPinCodeHost,
@@ -56,19 +49,14 @@ import { Camera } from '@ionic-native/camera';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp, {
-      // Configs for your app
-    },
-  )],
+	HttpModule,
+    IonicModule.forRoot(MyApp)
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage,
-    LoginPage,
+	LoginPage,
     HostPageNumberPhone,
     InsertPinCodeHost,
     Events,

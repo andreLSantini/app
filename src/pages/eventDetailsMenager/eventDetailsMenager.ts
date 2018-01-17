@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { EventListMenager } from '../eventlistmenager/EventListMenager';
+import { NavController } from 'ionic-angular';
 import { EventObject } from '../newevent/newEventObject';
 import { LoginPage } from '../login/login';
 import { EventDetails } from '../eventDetails/EventDetails';
@@ -16,9 +15,8 @@ export class EventDetailsMenager {
     events = EventDetails;
     settings = Settings;
 
-    constructor(public navCtrl: NavController,private navParams: NavParams) {
+    constructor(public navCtrl: NavController) {
         this.event = new EventObject();
-        let id = navParams.get('id');
     }
 
     goHome(){
